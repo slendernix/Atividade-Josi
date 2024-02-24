@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout CSS Grid com Bordas Arredondadas</title>
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Segunda coluna é três vezes maior que a primeira */
+    grid-template-rows: 1fr 1fr 5fr auto auto; /* A terceira linha é cinco vezes maior que as outras, adicionando uma linha extra no final */
+    gap: 5px;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: 120vh; /* A altura total da viewport */
+    padding: 15px; /* Espaço dentro do container */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
+    background-color: #f0f0f0; /* Cor de fundo para a área externa ao grid */
+  }
+
+  header, footer, aside, nav, article, .subgrid {
+    padding: 15px;
+    box-sizing: border-box;
+    color: #333;
+    font-family: Arial, sans-serif;
+    border-radius: 10px; 
+    overflow: hidden; 
+  }
+
+  header {
+    grid-column: 1 / -1; 
+    background-color: #ffca28; 
+  }
+
+  aside {
+    grid-column: 1; 
+    grid-row: 2 / 5; 
+    background-color: #ff7043; 
+  }
+
+  nav {
+    grid-column: 2; 
+    grid-row: 2; 
+    background-color: #29b6f6; 
+  }
+
+  article {
+    grid-column: 2; 
+    grid-row: 3; 
+    background-color: #808080; 
+  }
+
+  
+
+  footer {
+    grid-column: 1 / -1; 
+    grid-row: 5; 
+    background-color: #26a69a; 
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>Header</header>
+  <aside>Sidebar</aside>
+  <nav>Nav</nav>
+  <article>
+    <h2>Article</h2> 
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+  </article>
+  
+ 
+    
+  </div>
+  <footer>Footer</footer>
+</div>
+
+</body>
+</html>
